@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Apex</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bem vindo a calculadora online!</h1>
+        <h3>Esta é uma calculadora desenvolvida na Apex Ensino, com a função de praticar métodos ensinados!</h3>
+        <h6>Para acessá-la clique no botão abaixo</h6>
+        <button class="openCalc" onclick="openCalc()">Abrir calculadora</button>
+        <div id="calc" class="calculator">
+            <div class="header">
+                <button class="closeCalc" onclick="closeCalc()">X</button>
+            </div>
+            <div class="content">
+                <div class="form">
+                    <label for="fNumber">First number:</label><br>
+                    <input type="number" id="fNumber" name="fNumber" value="0"><br><br>
+                    <label for="lNumber">Last number:</label><br>
+                    <input type="number" id="lNumber" name="lNumber" value="0"><br><br>
+                    <label for="oper">Operation:</label><br>
+                    <select name="oper" id="oper">
+                        <option value="sum">Soma</option>
+                        <option value="sub">Subtração</option>
+                        <option value="mult">Multiplicação</option>
+                        <option value="div">Divisão</option>
+                    </select><br><br>
+                    <button onclick="calculate()">Calcular</button>
+                    <button onclick="resetCalculator()">Resetar</button>
+                </div>
+                <div class="result">
+                    <h2>Resultado</h2>
+                    <h1 id="resultNumber">0</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
